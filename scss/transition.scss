@@ -1,0 +1,15 @@
+.box {
+    width: 500px;
+    height: 500px;
+    background: red;
+    transform: translateX(0);
+    transition: transform .3s, opacity .6s;
+    opacity: 1;
+
+}
+
+.hide-boxes {
+    transform: translateX(-100vw);
+    opacity: 0;
+    transition: transform .3s, opacity .2s;
+}
