@@ -1,0 +1,13 @@
+.scroll-indicator {
+  font-size: 3em;
+  animation: bounce 1.6s infinite;
+  margin-bottom: 2em;
+  text-decoration: none;
+  color: black;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(50px);
+  }
+}

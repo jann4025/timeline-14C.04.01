@@ -1,6 +1,19 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 4em;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
 @import "scss/fonts";
 @import "scss/colors";
 @import "scss/transition";
 @import "scss/breakpoints";
 @import "scss/map";
 @import "scss/timeline";
+@import "scss/header";
