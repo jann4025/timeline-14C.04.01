@@ -1,6 +1,13 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 @import "scss/fonts";
 @import "scss/colors";
 @import "scss/transition";
 @import "scss/breakpoints";
 @import "scss/map";
 @import "scss/timeline";
+@import "scss/footer";
