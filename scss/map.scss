@@ -6,4 +6,24 @@
   .cls-1 {
     fill: #e0ddd5;
   }
+
+  ellipse.cls-1 {
+    fill: white;
+  }
+  ellipse path {
+    fill: white;
+  }
+
+  .cls-2 {
+    fill: none;
+    stroke: #000;
+
+    stroke-miterlimit: 10;
+  }
+
+  #journey_path {
+    position: relative;
+    top: -40em;
+    left: 13.5em;
+  }
 }
