@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding: 4em;
+  scroll-padding: 10em;
+  scroll-snap-type: y mandatory;
   margin: 0;
   padding: 0;
 }

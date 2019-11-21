@@ -2,50 +2,65 @@
     --circle-delay: .2s;
 }
 
-.box {
-    width: 300px;
-    height: 300px;
-    background: red;
-    transform: translateX(10vw) scale(1);
-    transition: transform .5s;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+$heading-text-delay: .3s;
 
-    h1 {
-        color: white;
-        opacity: 1;
-        transition: .4s;
-        transition-delay: .5s;
-    }
-
-    .circles {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    .circle {
-        transition: .4s;
-        opacity: 1;
-        transition-delay: calc(var(--i)*var(--circle-delay));
-        width: 50px;
-        height: 50px;
-        background: white;
-        border-radius: 50%;
-    }
-}
+#Layer_1>* {
+    scroll-snap-align: start;
 }
 
-.hide-boxes {
-    transform: translateX(-10vw) scale(0);
-    transition: transform .5s;
-    h1 {
+[data-name="infobox"] {
+    transform-origin: 0% 53%;
+    transform-box: fill-box;
+    transform: scale(0);
+    transition: transform .4s;
+    user-select: none;
+
+    [data-name="headline-text"] {
         opacity: 0;
-        transition: .4s;
+        transition: opacity .3s;
+        h1 {
+            margin: 0;
+            margin-top: .5rem;
+            color:white;
+        }
+        h2 {
+            margin: 0;
+            font-size: .9rem;
+            color:white;
+        }
+        
     }
-    .circles {
-    .circle {
-        transition: .4s;
+    .body-text {
         opacity: 0;
+        transition: opacity .3s;
     }
+
+        .circle {
+            opacity: 0;
+            transition: opacity var(--circle-delay);
+        }
+
+ &.selected {
+    transform: scale(1);
+    transition: transform .4s;
+    
+    [data-name="headline-text"] {
+        opacity: 1;
+        transition: opacity .3s;
+        transition-delay: $heading-text-delay;
+    }
+
+    .body-text {
+        opacity: 1;
+        transition: opacity .3s;
+        transition-delay: $heading-text-delay + .1s;
+    }
+        .circles>* {
+            opacity: 1;
+            transition: opacity var(--circle-delay);
+            transition-delay: calc(var(--i) * var(--circle-delay));
+        }
 }
+
 }
+
