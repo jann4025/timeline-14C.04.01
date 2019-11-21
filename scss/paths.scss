@@ -1,0 +1,62 @@
+#paths {
+  position: relative;
+  top: -38.5em;
+  left: 14em;
+
+  .cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
+  .cls-2 {
+    fill: #fff;
+  }
+
+  .first-path {
+    //Days on the path: day9
+    stroke-dashoffset: 70;
+    stroke-dasharray: 70 70;
+  }
+
+  .second-path {
+    //Days on the path: day21
+    stroke-dashoffset: 60;
+    stroke-dasharray: 60 60;
+  }
+
+  .third-path {
+    //Days on the path: day27
+    stroke-dashoffset: 60;
+    stroke-dasharray: 60 60;
+  }
+
+  .fourth-path {
+    //Days on the path: day50
+    stroke-dashoffset: 310;
+    stroke-dasharray: 310 310;
+    animation-direction: reverse;
+  }
+
+  .first-path-animate {
+    animation: animatepath 3s cubic-bezier(0, 0.23, 1, 0.1) both;
+  }
+  .second-path-animate {
+    animation: animatepath 3s cubic-bezier(0, 0.23, 1, 0.1) both;
+  }
+  .third-path-animate {
+    animation: animatepath 3s cubic-bezier(0, 0.23, 1, 0.1) both;
+  }
+  .fourth-path-animate {
+    animation: animatepath 3s cubic-bezier(0, 0.23, 1, 0.1) both;
+  }
+
+  .selected-icon {
+    fill: $yellow;
+  }
+}
+
+@keyframes animatepath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

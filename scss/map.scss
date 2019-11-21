@@ -4,15 +4,6 @@
   right: 0;
   z-index: -1;
 
-  #paths .cls-1 {
-    fill: none;
-    stroke: #000;
-    stroke-miterlimit: 10;
-  }
-  #paths .cls-2 {
-    fill: #fff;
-  }
-
   .cls-1 {
     fill: #e0ddd5;
   }
@@ -23,49 +14,10 @@
   ellipse path {
     fill: white;
   }
-  // #paths .cls-1 {
-  //   fill: none;
-  //   stroke: #000;
-  //   stroke-miterlimit: 10;
-  // }
 
   .cls-2 {
     fill: none;
-    stroke: #000;
-
     stroke-miterlimit: 10;
-  }
-
-  #paths {
-    position: relative;
-    top: -38.5em;
-    left: 14em;
-  }
-
-  #paths path.cls-1 {
-    stroke-dasharray: 500;
-    opacity: 10;
-    animation: animatepath 3s cubic-bezier(0, 0.23, 1, 0.1);
-  }
-
-  @keyframes animatepath {
-    0% {
-      opacity: 0;
-      fill: none;
-      stroke-dashoffset: 500;
-    }
-
-    30% {
-      opacity: 10;
-      fill: none;
-      stroke-dashoffset: 500;
-    }
-
-    100% {
-      opacity: 10;
-
-      stroke-dashoffset: 0;
-    }
   }
 
   @keyframes animatewaves {
@@ -80,43 +32,7 @@
     100% {
       transform: translateX(0px);
     }
-    // 0% {
-    //   opacity: 10;
-    //   fill: none;
-    //   stroke-dashoffset: 700;
-    // }
-
-    // 30% {
-    //   opacity: 10;
-    //   fill: none;
-    //   stroke-dashoffset: 700;
-    // }
-
-    // 100% {
-    //   opacity: 10;
-    //   stroke-dashoffset: 0;
-    // }
-
-    // 0% {
-    //   // opacity: 0;
-    //   fill: none;
-    //   stroke-dashoffset: 700;
-    // }
   }
-
-  // @keyframes animatesecondwave {
-  //   0% {
-  //     transform: translateX(0px);
-  //   }
-
-  //   50% {
-  //     transform: translateX(-30px);
-  //   }
-
-  //   100% {
-  //     transform: translateX(0px);
-  //   }
-  // }
 
   #boats {
     img {
@@ -146,15 +62,15 @@
       height: 100%;
       animation: bounce3 5s infinite;
     }
-    #travellingboat img {
-      position: absolute;
-      top: -300px;
-      left: 380px;
-      width: 80px;
-      height: 100%;
-      animation: bounce3 5s infinite;
-      z-index: 100;
-    }
+    // #travellingboat img {
+    //   position: absolute;
+    //   top: -300px;
+    //   left: 380px;
+    //   width: 80px;
+    //   height: 100%;
+    //   animation: bounce3 5s infinite;
+    //   z-index: 100;
+    // }
   }
 
   #waves .cls-1,
@@ -209,6 +125,26 @@
   @keyframes bounce3 {
     50% {
       transform: rotate(7deg);
+    }
+  }
+
+  #wagon {
+    position: absolute;
+    width: 4em;
+    .cls-1 {
+      fill: #703529;
+    }
+
+    .cls-2 {
+      fill: #c6934b;
+    }
+
+    .cls-3 {
+      fill: #f2cd64;
+    }
+
+    .cls-4 {
+      fill: #9e7456;
     }
   }
 }

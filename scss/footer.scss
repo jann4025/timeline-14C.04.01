@@ -1,18 +1,19 @@
 footer {
-  height: 250px;
-  width: 100vw;
-  background-color: $white;
+  background-color: $dark-blue;
+  font-family: $text;
   // position: absolute;
   // bottom: 0;
 
   h2 {
-    color: black;
+    color: whitesmoke;
+    padding: 2em 6em;
+    font-size: 1.2em;
   }
 
   #parent {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
