@@ -66,9 +66,45 @@ function openDay() {
     thisInfoBox.classList.add("selected");
   }
 
+  if (thisDay == "day1") {
+    document.querySelector("#troy-icon .cls-2").classList.add("selected-icon");
+  }
+
+  if (thisDay == "day7") {
+    document.querySelector("#troy-icon .cls-2").classList.remove("selected-icon");
+    document.querySelector("#sparta-icon .cls-2").classList.add("selected-icon");
+  }
+
+  if (thisDay == "day9") {
+    document.querySelector(".first-path").classList.add("first-path-animate");
+    document.querySelector("#sparta-icon .cls-2").classList.remove("selected-icon");
+    document.querySelector("#mycenae-icon .cls-2").classList.add("selected-icon");
+  }
+  if (thisDay == "day21") {
+    document.querySelector(".second-path").classList.add("second-path-animate");
+    document.querySelector("#mycenae-icon .cls-2").classList.remove("selected-icon");
+    document.querySelector("#aulis-icon .cls-2").classList.add("selected-icon");
+  }
+  if (thisDay == "day27") {
+    document.querySelector(".third-path").classList.add("third-path-animate");
+    document.querySelector("#aulis-icon .cls-2").classList.remove("selected-icon");
+    document.querySelector("#mycenae-icon .cls-2").classList.add("selected-icon");
+  }
+  if (thisDay == "day38") {
+    document.querySelector("#aulis-icon .cls-2").classList.add("selected-icon");
+    document.querySelector("#mycenae-icon .cls-2").classList.remove("selected-icon");
+  }
+  if (thisDay == "day50") {
+    document.querySelector(".fourth-path").classList.add("fourth-path-animate");
+    document.querySelector("#troy-icon .cls-2").classList.add("selected-icon");
+  }
+
   if (selected && thisDay == "day50") {
-    console.log("hej");
     window.location.href = `/#day1`;
+    document.querySelector(".first-path").classList.remove("first-path-animate");
+    document.querySelector(".second-path").classList.remove("second-path-animate");
+    document.querySelector(".third-path").classList.remove("third-path-animate");
+    document.querySelector(".fourth-path").classList.remove("fourth-path-animate");
   }
   console.log(thisDay);
 }
