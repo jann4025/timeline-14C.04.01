@@ -1,0 +1,19 @@
+footer {
+  height: 250px;
+  width: 100vw;
+  background-color: $white;
+  // position: absolute;
+  // bottom: 0;
+
+  h2 {
+    color: black;
+  }
+
+  #parent {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

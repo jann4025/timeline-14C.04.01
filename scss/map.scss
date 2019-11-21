@@ -157,7 +157,7 @@
     height: 100%;
     stroke-dasharray: 700;
     opacity: 10;
-    animation: animatewaves 5s infinite;
+    animation: animatewaves 5s infinite ease-in-out;
     // animation: bounce3 5s infinite;
   }
 
@@ -170,12 +170,14 @@
     stroke-dasharray: 700;
     opacity: 10;
     animation: animatewaves 5s infinite;
+    animation-delay: 0.4s;
     // animation: bounce3 5s infinite;
   }
 
   @keyframes bounce2 {
     50% {
       transform: translateX(5px);
+      transform: rotate(-5deg);
     }
     //   100% {
     //     transform: translateX(5px);
@@ -185,6 +187,7 @@
   @keyframes bounce3 {
     50% {
       transform: translateY(-5px);
+      transform: rotate(5deg);
     }
   }
 }
