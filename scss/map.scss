@@ -4,6 +4,15 @@
   right: 0;
   z-index: -1;
 
+  #paths .cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
+  #paths .cls-2 {
+    fill: #fff;
+  }
+
   .cls-1 {
     fill: #e0ddd5;
   }
@@ -14,11 +23,11 @@
   ellipse path {
     fill: white;
   }
-  #paths .cls-1 {
-    fill: none;
-    stroke: #000;
-    stroke-miterlimit: 10;
-  }
+  // #paths .cls-1 {
+  //   fill: none;
+  //   stroke: #000;
+  //   stroke-miterlimit: 10;
+  // }
 
   .cls-2 {
     fill: none;
@@ -61,22 +70,53 @@
 
   @keyframes animatewaves {
     0% {
-      opacity: 0;
-      fill: none;
-      stroke-dashoffset: 700;
+      transform: translateX(0px);
     }
 
-    30% {
-      opacity: 10;
-      fill: none;
-      stroke-dashoffset: 700;
+    50% {
+      transform: translateX(10px);
     }
 
     100% {
-      opacity: 10;
-      stroke-dashoffset: 0;
+      transform: translateX(0px);
     }
+    // 0% {
+    //   opacity: 10;
+    //   fill: none;
+    //   stroke-dashoffset: 700;
+    // }
+
+    // 30% {
+    //   opacity: 10;
+    //   fill: none;
+    //   stroke-dashoffset: 700;
+    // }
+
+    // 100% {
+    //   opacity: 10;
+    //   stroke-dashoffset: 0;
+    // }
+
+    // 0% {
+    //   // opacity: 0;
+    //   fill: none;
+    //   stroke-dashoffset: 700;
+    // }
   }
+
+  // @keyframes animatesecondwave {
+  //   0% {
+  //     transform: translateX(0px);
+  //   }
+
+  //   50% {
+  //     transform: translateX(-30px);
+  //   }
+
+  //   100% {
+  //     transform: translateX(0px);
+  //   }
+  // }
 
   #boats {
     img {
@@ -85,7 +125,8 @@
       left: 400px;
       width: 50px;
       height: 100%;
-      animation: bounce2 5s infinite;
+      animation: bounce3 5s infinite;
+      z-index: 100;
     }
 
     #secondboat img {
@@ -128,14 +169,13 @@
 
   #waves svg {
     position: absolute;
-    top: 50px;
-    left: 500px;
+    top: -38px;
+    left: 370px;
     width: 100px;
     height: 100%;
     stroke-dasharray: 700;
     opacity: 10;
     animation: animatewaves 5s infinite;
-    // animation: bounce3 5s infinite;
   }
 
   #wave2 svg {
@@ -146,19 +186,7 @@
     height: 100%;
     stroke-dasharray: 700;
     opacity: 10;
-    animation: animatewaves 5s infinite;
-    // animation: bounce3 5s infinite;
-  }
-  #wave3 svg {
-    position: absolute;
-    top: 100px;
-    left: 100px;
-    width: 100px;
-    height: 100%;
-    stroke-dasharray: 700;
-    opacity: 10;
     animation: animatewaves 5s infinite ease-in-out;
-    // animation: bounce3 5s infinite;
   }
 
   #wave4 svg {
@@ -170,8 +198,6 @@
     stroke-dasharray: 700;
     opacity: 10;
     animation: animatewaves 5s infinite;
-    animation-delay: 0.4s;
-    // animation: bounce3 5s infinite;
   }
 
   @keyframes bounce2 {
@@ -179,15 +205,11 @@
       transform: translateX(5px);
       transform: rotate(-5deg);
     }
-    //   100% {
-    //     transform: translateX(5px);
-    //   }
   }
 
   @keyframes bounce3 {
     50% {
-      transform: translateY(-5px);
-      transform: rotate(5deg);
+      transform: rotate(7deg);
     }
   }
 }
