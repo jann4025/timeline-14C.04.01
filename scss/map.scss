@@ -2,6 +2,16 @@
   position: sticky;
   top: 0;
   right: 0;
+  z-index: -1;
+
+  #paths .cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-miterlimit: 10;
+  }
+  #paths .cls-2 {
+    fill: #fff;
+  }
 
   .cls-1 {
     fill: #e0ddd5;
@@ -13,6 +23,11 @@
   ellipse path {
     fill: white;
   }
+  // #paths .cls-1 {
+  //   fill: none;
+  //   stroke: #000;
+  //   stroke-miterlimit: 10;
+  // }
 
   .cls-2 {
     fill: none;
@@ -21,9 +36,179 @@
     stroke-miterlimit: 10;
   }
 
-  #journey_path {
+  #paths {
     position: relative;
-    top: -40em;
-    left: 13.5em;
+    top: -38.5em;
+    left: 14em;
+  }
+
+  #paths path.cls-1 {
+    stroke-dasharray: 500;
+    opacity: 10;
+    animation: animatepath 3s cubic-bezier(0, 0.23, 1, 0.1);
+  }
+
+  @keyframes animatepath {
+    0% {
+      opacity: 0;
+      fill: none;
+      stroke-dashoffset: 500;
+    }
+
+    30% {
+      opacity: 10;
+      fill: none;
+      stroke-dashoffset: 500;
+    }
+
+    100% {
+      opacity: 10;
+
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes animatewaves {
+    0% {
+      transform: translateX(0px);
+    }
+
+    50% {
+      transform: translateX(10px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+    // 0% {
+    //   opacity: 10;
+    //   fill: none;
+    //   stroke-dashoffset: 700;
+    // }
+
+    // 30% {
+    //   opacity: 10;
+    //   fill: none;
+    //   stroke-dashoffset: 700;
+    // }
+
+    // 100% {
+    //   opacity: 10;
+    //   stroke-dashoffset: 0;
+    // }
+
+    // 0% {
+    //   // opacity: 0;
+    //   fill: none;
+    //   stroke-dashoffset: 700;
+    // }
+  }
+
+  // @keyframes animatesecondwave {
+  //   0% {
+  //     transform: translateX(0px);
+  //   }
+
+  //   50% {
+  //     transform: translateX(-30px);
+  //   }
+
+  //   100% {
+  //     transform: translateX(0px);
+  //   }
+  // }
+
+  #boats {
+    img {
+      position: absolute;
+      top: -80px;
+      left: 400px;
+      width: 50px;
+      height: 100%;
+      animation: bounce3 5s infinite;
+      z-index: 100;
+    }
+
+    #secondboat img {
+      position: absolute;
+      top: -300px;
+      left: 500px;
+      width: 40px;
+      height: 100%;
+      animation: bounce3 5s infinite;
+    }
+
+    #thirdboat img {
+      position: absolute;
+      top: -140px;
+      left: 100px;
+      width: 65px;
+      height: 100%;
+      animation: bounce3 5s infinite;
+    }
+    #travellingboat img {
+      position: absolute;
+      top: -300px;
+      left: 380px;
+      width: 80px;
+      height: 100%;
+      animation: bounce3 5s infinite;
+      z-index: 100;
+    }
+  }
+
+  #waves .cls-1,
+  #wave2 .cls-1,
+  #wave3 .cls-1,
+  #wave4 .cls-1 {
+    fill: none;
+    stroke: #2e3546;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
+  }
+
+  #waves svg {
+    position: absolute;
+    top: -38px;
+    left: 370px;
+    width: 100px;
+    height: 100%;
+    stroke-dasharray: 700;
+    opacity: 10;
+    animation: animatewaves 5s infinite;
+  }
+
+  #wave2 svg {
+    position: absolute;
+    top: -90px;
+    left: 90px;
+    width: 100px;
+    height: 100%;
+    stroke-dasharray: 700;
+    opacity: 10;
+    animation: animatewaves 5s infinite ease-in-out;
+  }
+
+  #wave4 svg {
+    position: absolute;
+    top: -290px;
+    left: 480px;
+    width: 100px;
+    height: 100%;
+    stroke-dasharray: 700;
+    opacity: 10;
+    animation: animatewaves 5s infinite;
+  }
+
+  @keyframes bounce2 {
+    50% {
+      transform: translateX(5px);
+    }
+  }
+
+  @keyframes bounce3 {
+    50% {
+      transform: rotate(7deg);
+    }
   }
 }

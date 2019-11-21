@@ -10,6 +10,16 @@ body {
   overscroll-behavior: none;
 }
 
+#content {
+  #id {
+    position: absolute;
+  }
+
+  #map {
+    position: fixed;
+  }
+}
+
 @import "scss/fonts";
 @import "scss/colors";
 @import "scss/transition";

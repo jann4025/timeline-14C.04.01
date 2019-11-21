@@ -1,6 +1,42 @@
 #timeline {
   margin: 2em;
 
+  .cls-1,
+  .cls-2 {
+    fill: #2d3445;
+  }
+  .cls-2 {
+    stroke: #f8f7f7;
+  }
+  .cls-2,
+  .cls-5,
+  .cls-6 {
+    stroke-miterlimit: 10;
+  }
+  .cls-2,
+  .cls-5 {
+    stroke-width: 4px;
+  }
+  .cls-3 {
+    fill: #fff;
+  }
+  .cls-4,
+  .cls-5 {
+    fill: #703529;
+  }
+  .cls-5 {
+    stroke: #fff;
+  }
+  .cls-6 {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2px;
+  }
+
+  img {
+    z-index: 100;
+  }
+
   .cls-1 {
     fill: none;
     stroke: #000;
