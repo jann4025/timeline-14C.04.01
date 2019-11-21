@@ -203,6 +203,7 @@
   @keyframes bounce2 {
     50% {
       transform: translateX(5px);
+      transform: rotate(-5deg);
     }
   }
 
