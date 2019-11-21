@@ -11,8 +11,69 @@ function start() {
   fetchTimelineInfo();
 }
 
-document.querySelector("#timeline").innerHTML = `
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="532.22" height="1233.92" viewBox="0 0 532.22 1233.92">
+function fetchTimelineInfo() {
+  axios.get("https://v2-api.sheety.co/2d953e1a09a4d62db89c0f444ce7a8dd/timeline/timeline").then(res => {
+    timelineInfo = res.data.timeline;
+    printTimeLineInfo();
+    addEventListenerCircles();
+    console.log(timelineInfo);
+  });
+}
+
+function addEventListenerCircles() {
+  const circles = document.querySelectorAll(".circle");
+  circles.forEach(circle => circle.addEventListener("click", openDay));
+}
+
+function printTimeLineInfo() {
+  document.querySelector("#day50 > #infobox").dataset.name = "infobox";
+  document.querySelector("#day50 #headline-text").dataset.name = "headline-text";
+  document.querySelector("#day50 .cls-3").setAttribute("cx", "22.4");
+  document.querySelectorAll(`[data-name="infobox"]`).forEach(box => box.classList.add("infobox"));
+
+  timelineInfo.forEach(day => {
+    let emptyHtml = document.createElement("DIV");
+    emptyHtml.classList.add("box");
+    document.querySelector("#timeline").appendChild(emptyHtml);
+    let transform = document.querySelector(`g#day${day.id} .cls-7`).getAttribute("transform");
+    document.querySelector(`g#day${day.id}>g`).classList.add("circle");
+    document.querySelector(`g#day${day.id} .infobox`).dataset.day = `day${day.id}`;
+    document.querySelector(`g#day${day.id} .circle`).dataset.day = `day${day.id}`;
+    document.querySelector(`g#day${day.id} .cls-5`).textContent = day.day;
+    document.querySelector(`g#day${day.id} .cls-7`).textContent = day.city;
+    document.querySelector(
+      `g#day${day.id} [data-name="infobox"]`
+    ).innerHTML += `<foreignObject class="obj" width="370" height="190" transform="${transform}"><p class="body-text" xmlns="http://www.w3.org/1999/xhtml">${day.text}</p></foreignObject>`;
+  });
+}
+
+function openDay() {
+  const thisDay = this.dataset.day;
+  const allBoxes = document.querySelectorAll(`[data-name="infobox"]`);
+  const selected = this.classList.contains("selected");
+  const thisInfoBox = document.querySelector(`.infobox[data-day="${thisDay}"]`);
+  const circles = document.querySelectorAll(".circle");
+  circles.forEach(circle => circle.classList.remove("selected"));
+  window.location.href = `/#${thisDay}`;
+  console.log(selected);
+  if (selected) {
+    circles.forEach(circle => circle.classList.remove("selected"));
+    this.classList.remove("selected");
+    allBoxes.forEach(box => box.classList.remove("selected"));
+  } else {
+    allBoxes.forEach(box => box.classList.remove("selected"));
+    this.classList.add("selected");
+    thisInfoBox.classList.add("selected");
+  }
+
+  if (selected && thisDay == "day50") {
+    console.log("hej");
+    window.location.href = `/#day1`;
+  }
+  console.log(thisDay);
+}
+
+document.querySelector("#timeline").innerHTML = `<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="532.22" height="1233.92" viewBox="0 0 532.22 1233.92">
   <g id="dotted-lines">
     <line class="cls-1" x1="19.82" y1="232.85" x2="19.82" y2="238.61"/>
     <line class="cls-1" x1="19.82" y1="199.85" x2="19.82" y2="205.61"/>
@@ -805,65 +866,3 @@ document.querySelector("#timeline").innerHTML = `
   </g>
 </svg>
 `;
-
-function fetchTimelineInfo() {
-  axios.get("https://v2-api.sheety.co/2d953e1a09a4d62db89c0f444ce7a8dd/timeline/timeline").then(res => {
-    timelineInfo = res.data.timeline;
-    printTimeLineInfo();
-    addEventListenerCircles();
-    console.log(timelineInfo);
-  });
-}
-
-function addEventListenerCircles() {
-  const circles = document.querySelectorAll(".circle");
-  circles.forEach(circle => circle.addEventListener("click", openDay));
-}
-
-function printTimeLineInfo() {
-  document.querySelector("#day50 > #infobox").dataset.name = "infobox";
-  document.querySelector("#day50 #headline-text").dataset.name = "headline-text";
-  document.querySelector("#day50 .cls-3").setAttribute("cx", "22.4");
-  document.querySelectorAll(`[data-name="infobox"]`).forEach(box => box.classList.add("infobox"));
-
-  timelineInfo.forEach(day => {
-    let emptyHtml = document.createElement("DIV");
-    emptyHtml.classList.add("box");
-    document.querySelector("#timeline").appendChild(emptyHtml);
-    let transform = document.querySelector(`g#day${day.id} .cls-7`).getAttribute("transform");
-    document.querySelector(`g#day${day.id}>g`).classList.add("circle");
-    document.querySelector(`g#day${day.id} .infobox`).dataset.day = `day${day.id}`;
-    document.querySelector(`g#day${day.id} .circle`).dataset.day = `day${day.id}`;
-    document.querySelector(`g#day${day.id} .cls-5`).textContent = day.day;
-    document.querySelector(`g#day${day.id} .cls-7`).textContent = day.city;
-    document.querySelector(
-      `g#day${day.id} [data-name="infobox"]`
-    ).innerHTML += `<foreignObject class="obj" width="370" height="190" transform="${transform}"><p class="body-text" xmlns="http://www.w3.org/1999/xhtml">${day.text}</p></foreignObject>`;
-  });
-}
-
-function openDay() {
-  const thisDay = this.dataset.day;
-  const allBoxes = document.querySelectorAll(`[data-name="infobox"]`);
-  const selected = this.classList.contains("selected");
-  const thisInfoBox = document.querySelector(`.infobox[data-day="${thisDay}"]`);
-  const circles = document.querySelectorAll(".circle");
-  circles.forEach(circle => circle.classList.remove("selected"));
-  window.location.href = `/#${thisDay}`;
-  console.log(selected);
-  if (selected) {
-    circles.forEach(circle => circle.classList.remove("selected"));
-    this.classList.remove("selected");
-    allBoxes.forEach(box => box.classList.remove("selected"));
-  } else {
-    allBoxes.forEach(box => box.classList.remove("selected"));
-    this.classList.add("selected");
-    thisInfoBox.classList.add("selected");
-  }
-
-  if (selected && thisDay == "day50") {
-    console.log("hej");
-    window.location.href = `/#day1`;
-  }
-  console.log(thisDay);
-}
