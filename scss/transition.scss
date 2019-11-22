@@ -59,5 +59,16 @@ $heading-text-delay: .3s;
         }
 }
 
+.pulse {
+animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
 }
 
