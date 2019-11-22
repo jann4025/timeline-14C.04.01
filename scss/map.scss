@@ -23,7 +23,7 @@
   }
 
   #boats {
-    img {
+    #firstboat img {
       position: absolute;
       top: -80px;
       left: 400px;
@@ -73,7 +73,7 @@
 
     #wave-1 {
       position: absolute;
-      top: 520px;
+      top: 535px;
       left: 370px;
       stroke-dasharray: 700;
       animation: animatewaves 5s infinite;
@@ -81,7 +81,7 @@
 
     #wave-2 {
       position: absolute;
-      top: 470px;
+      top: 482px;
       left: 70px;
       stroke-dasharray: 700;
       animation: animatewaves 5s infinite;
@@ -89,15 +89,15 @@
 
     #wave-3 {
       position: absolute;
-      top: 280px;
-      left: 465px;
+      top: 290px;
+      left: 460px;
       stroke-dasharray: 700;
       animation: animatewaves 5s infinite;
     }
 
     #wave-4 {
       position: absolute;
-      top: 200px;
+      top: 230px;
       left: 365px;
       stroke-dasharray: 700;
       animation: animatewaves 5s infinite;
