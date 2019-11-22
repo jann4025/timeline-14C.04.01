@@ -76,52 +76,48 @@
   }
 
   #waves {
-    #wave-1 .cls-1,
-    #wave-2 .cls-1,
-    #wave-3 .cls-1,
-    #wave-4 .cls-1,
-    #wave-5 .cls-1 {
+    .cls-1 {
       fill: none;
       stroke: #2e3546;
       stroke-miterlimit: 10;
       stroke-width: 1px;
     }
+  }
 
-    #wave-1 {
-      position: absolute;
-      top: -38px;
-      left: 370px;
-      height: 100%;
-      stroke-dasharray: 700;
-      animation: animatewaves 5s infinite;
-    }
+  #wave-1 {
+    position: absolute;
+    top: -38px;
+    left: 370px;
+    height: 100%;
+    stroke-dasharray: 700;
+    animation: animatewaves 5s infinite;
+  }
 
-    #wave-2 {
-      position: absolute;
-      top: -90px;
-      left: 90px;
-      height: 100%;
-      stroke-dasharray: 700;
-      animation: animatewaves 5s infinite;
-    }
+  #wave-2 {
+    position: absolute;
+    top: -90px;
+    left: 90px;
+    height: 100%;
+    stroke-dasharray: 700;
+    animation: animatewaves 5s infinite;
+  }
 
-    #wave-3 {
-      position: absolute;
-      top: -290px;
-      left: 480px;
-      height: 100%;
-      stroke-dasharray: 700;
-      animation: animatewaves 5s infinite;
-    }
+  #wave-3 {
+    position: absolute;
+    top: -290px;
+    left: 480px;
+    height: 100%;
+    stroke-dasharray: 700;
+    animation: animatewaves 5s infinite;
+  }
 
-    #wave-4 {
-      position: absolute;
-      top: -340px;
-      left: 365px;
-      height: 100%;
-      stroke-dasharray: 700;
-      animation: animatewaves 5s infinite;
-    }
+  #wave-4 {
+    position: absolute;
+    top: -340px;
+    left: 365px;
+    height: 100%;
+    stroke-dasharray: 700;
+    animation: animatewaves 5s infinite;
   }
 
   @keyframes bounce2 {
