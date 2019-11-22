@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", start);
 let timelineInfo;
 
 function start() {
-  console.log("Connection between the DOM and the Script was successfull! Nice 😎");
-  // addEventListenerCircles();
   fetchTimelineInfo();
 }
 
@@ -16,7 +14,6 @@ function fetchTimelineInfo() {
     timelineInfo = res.data.timeline;
     printTimeLineInfo();
     addEventListenerCircles();
-    console.log(timelineInfo);
   });
 }
 
@@ -55,7 +52,6 @@ function openDay() {
   const circles = document.querySelectorAll(".circle");
   circles.forEach(circle => circle.classList.remove("selected"));
   window.location.href = `/#${thisDay}`;
-  console.log(selected);
   if (selected) {
     circles.forEach(circle => circle.classList.remove("selected"));
     this.classList.remove("selected");
@@ -106,7 +102,6 @@ function openDay() {
     document.querySelector(".third-path").classList.remove("third-path-animate");
     document.querySelector(".fourth-path").classList.remove("fourth-path-animate");
   }
-  console.log(thisDay);
 }
 
 document.querySelector("#timeline").innerHTML = `<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="532.22" height="1233.92" viewBox="0 0 532.22 1233.92">
