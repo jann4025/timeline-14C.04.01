@@ -3,3 +3,18 @@
     visibility: visible;
   }
 }
+//Mobile
+@media screen and (max-width: 900px) {
+  #map {
+    width: 90%;
+  }
+
+  #paths {
+    top: -35em;
+    left: 11em;
+  }
+  #overall,
+  footer {
+    width: 120vw !important;
+  }
+}

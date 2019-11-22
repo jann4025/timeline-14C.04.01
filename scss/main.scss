@@ -24,7 +24,6 @@ body {
 @import "scss/fonts";
 @import "scss/colors";
 @import "scss/transition";
-
 @import "scss/map";
 @import "scss/timeline";
 @import "scss/header";
@@ -41,10 +40,9 @@ body {
   place-items: center;
   font-family: $text;
   visibility: hidden;
-
+  z-index: 999;
   h1 {
     font-size: 2rem;
   }
 }
-
 @import "scss/breakpoints";

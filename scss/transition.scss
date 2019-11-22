@@ -4,9 +4,6 @@
 
 $heading-text-delay: .3s;
 
-#Layer_1>* {
-    scroll-snap-align: start;
-}
 
 [data-name="infobox"] {
     transform-origin: 0% 53%;
@@ -61,6 +58,17 @@ $heading-text-delay: .3s;
             transition-delay: calc(var(--i) * var(--circle-delay));
         }
 }
+
+.pulse {
+animation: pulse 1s linear infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.2);
+    }
+}
+
 
 }
 

@@ -64,6 +64,7 @@ function openDay() {
 
   if (thisDay == "day1") {
     document.querySelector("#troy-icon .cls-2").classList.add("selected-icon");
+    document.querySelectorAll(".remove").forEach(remove => remove.style.display = "none");
   }
 
   if (thisDay == "day7") {
@@ -895,5 +896,7 @@ document.querySelector("#timeline").innerHTML = `<svg id="Layer_1" data-name="La
       </g>
     </g>
   </g>
+  <path class="remove" d="M58.21,265.87c13.78.43,25.11-4.8,33.54-16.4a40.92,40.92,0,0,0,7.69-24.27H95c-.36,12.13-5,22-14.3,29.15-7.54,5.79-15.19,7-22.42,6.7,3.21-3.37,6.42-6.76,9.62-10.13l-3.23-3.39L49.43,263.45l15.23,15.93,3.1-3.3L58.15,266Z" transform="translate(-3 -111.66)"/>
+  <text class="cls-16 remove pulse" transform="translate(36.92 106.61)">Click he<tspan class="cls-17" x="80.87" y="0">r</tspan><tspan x="88.8" y="0">e </tspan><tspan class="cls-18" x="106.62" y="0">t</tspan><tspan x="114.75" y="0">o get sta</tspan><tspan class="cls-19" x="204.07" y="0">r</tspan><tspan class="cls-20" x="212.84" y="0">t</tspan><tspan x="220.97" y="0">ed</tspan></text>
 </svg>
 `;
