@@ -82,42 +82,42 @@
       stroke-miterlimit: 10;
       stroke-width: 1px;
     }
-  }
 
-  #wave-1 {
-    position: absolute;
-    top: -38px;
-    left: 370px;
-    height: 100%;
-    stroke-dasharray: 700;
-    animation: animatewaves 5s infinite;
-  }
+    #wave-1 {
+      position: absolute;
+      top: -38px;
+      left: 370px;
+      height: 100%;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
 
-  #wave-2 {
-    position: absolute;
-    top: -90px;
-    left: 90px;
-    height: 100%;
-    stroke-dasharray: 700;
-    animation: animatewaves 5s infinite;
-  }
+    #wave-2 {
+      position: absolute;
+      top: -90px;
+      left: 90px;
+      height: 100%;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
 
-  #wave-3 {
-    position: absolute;
-    top: -290px;
-    left: 480px;
-    height: 100%;
-    stroke-dasharray: 700;
-    animation: animatewaves 5s infinite;
-  }
+    #wave-3 {
+      position: absolute;
+      top: -290px;
+      left: 480px;
+      height: 100%;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
 
-  #wave-4 {
-    position: absolute;
-    top: -340px;
-    left: 365px;
-    height: 100%;
-    stroke-dasharray: 700;
-    animation: animatewaves 5s infinite;
+    #wave-4 {
+      position: absolute;
+      top: -340px;
+      left: 365px;
+      height: 100%;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
   }
 
   @keyframes bounce2 {
