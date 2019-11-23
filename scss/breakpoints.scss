@@ -10,11 +10,32 @@
   }
 
   #paths {
-    top: -35em;
-    left: 11em;
+    top: -40em;
+    left: 16em;
   }
   #overall,
   footer {
     width: 120vw !important;
+  }
+
+  #firstboat img {
+    visibility: hidden;
+  }
+
+  #thirdboat img {
+    top: -175px !important;
+  }
+
+  #wave-1,
+  #wave-2 {
+    visibility: hidden;
+  }
+
+  #wave-3 {
+    top: 250px !important;
+  }
+
+  #wave-4 {
+    top: 195px !important;
   }
 }

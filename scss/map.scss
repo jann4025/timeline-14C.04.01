@@ -22,22 +22,8 @@
     stroke-miterlimit: 10;
   }
 
-  @keyframes animatewaves {
-    0% {
-      transform: translateX(0px);
-    }
-
-    50% {
-      transform: translateX(10px);
-    }
-
-    100% {
-      transform: translateX(0px);
-    }
-  }
-
   #boats {
-    img {
+    #firstboat img {
       position: absolute;
       top: -80px;
       left: 400px;
@@ -75,58 +61,47 @@
     }
   }
 
-  #waves .cls-1,
-  #wave2 .cls-1,
-  #wave3 .cls-1,
-  #wave4 .cls-1,
-  #wave5 .cls-1 {
-    fill: none;
-    stroke: #2e3546;
-    stroke-miterlimit: 10;
-    stroke-width: 3px;
-  }
+  #waves {
+    position: relative;
 
-  #waves svg {
-    position: absolute;
-    top: -38px;
-    left: 370px;
-    width: 100px;
-    height: 100%;
-    stroke-dasharray: 700;
-    opacity: 10;
-    animation: animatewaves 5s infinite;
-  }
+    .cls-1 {
+      fill: none;
+      stroke: #2e3546;
+      stroke-miterlimit: 10;
+      stroke-width: 1px;
+    }
 
-  #wave2 svg {
-    position: absolute;
-    top: -90px;
-    left: 90px;
-    width: 100px;
-    height: 100%;
-    stroke-dasharray: 700;
-    opacity: 10;
-    animation: animatewaves 5s infinite ease-in-out;
-  }
+    #wave-1 {
+      position: absolute;
+      top: 535px;
+      left: 370px;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
 
-  #wave4 svg {
-    position: absolute;
-    top: -290px;
-    left: 480px;
-    width: 100px;
-    height: 100%;
-    stroke-dasharray: 700;
-    opacity: 10;
-    animation: animatewaves 5s infinite;
-  }
-  #wave5 svg {
-    position: absolute;
-    top: -340px;
-    left: 365px;
-    width: 100px;
-    height: 100%;
-    stroke-dasharray: 700;
-    opacity: 10;
-    animation: animatewaves 5s infinite;
+    #wave-2 {
+      position: absolute;
+      top: 482px;
+      left: 70px;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
+
+    #wave-3 {
+      position: absolute;
+      top: 290px;
+      left: 460px;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
+
+    #wave-4 {
+      position: absolute;
+      top: 230px;
+      left: 365px;
+      stroke-dasharray: 700;
+      animation: animatewaves 5s infinite;
+    }
   }
 
   @keyframes bounce2 {
@@ -139,6 +114,20 @@
   @keyframes bounce3 {
     50% {
       transform: rotate(7deg);
+    }
+  }
+
+  @keyframes animatewaves {
+    0% {
+      transform: translateX(0px);
+    }
+
+    50% {
+      transform: translateX(10px);
+    }
+
+    100% {
+      transform: translateX(0px);
     }
   }
 }
